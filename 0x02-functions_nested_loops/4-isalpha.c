@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * _islower - check for alphabetic character
+ * _isalpha - check for alphabetic character
  * @c: character to search
  * Return: integer - 1 if c is a letter, lowercase or uppercase and 0 otherwise
  */
