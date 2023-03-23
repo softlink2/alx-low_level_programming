@@ -11,5 +11,7 @@
 	void jack_bauer(void);
 	int add(int, int);
 	void times_table(void);
+	void print_to_98(int);
 	#define TIMES_TABLE 9
+	#define TO98 98
 #endif

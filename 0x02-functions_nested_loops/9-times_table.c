@@ -3,6 +3,7 @@
 
 /**
  * times_table - print the 9 times table, starting with 0
+ * Time complexity is O(n ^ 2) where n is TIMES_TABLE
 */
 
 void times_table(void)
