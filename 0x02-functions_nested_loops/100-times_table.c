@@ -3,7 +3,6 @@
 
 /**
  * times_table - print N times table, starting with 0
- * Time complexity is O(n ^ 2)
  * @n: N times table
 */
 
@@ -17,6 +16,11 @@ void print_times_table(int n)
 	{
 		for (e = 0; e <= n; e++)
 		{
+			if (n == 0)
+			{
+				printf("%d\n", n);
+				return;
+			}
 			if (e == 0)
 				printf("%d,", e * c);
 			else
