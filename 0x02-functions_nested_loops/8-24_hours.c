@@ -11,7 +11,7 @@ void jack_bauer(void)
 	while (1)
 	{
 		if (time[3] > 9)
-		{ 
+		{
 			time[3] = 0;
 			time[2]++;
 		}
