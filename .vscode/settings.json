@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.ejs": "html",
-    "sstream": "c"
+    "sstream": "c",
+    "random": "c"
   }
 }
