@@ -12,6 +12,8 @@
 	int add(int, int);
 	void times_table(void);
 	void print_to_98(int);
+	void print_times_table(int);
+
 	#define TIMES_TABLE 9
 	#define TO98 98
 #endif
