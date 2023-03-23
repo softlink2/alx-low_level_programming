@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * times_table - print N times table, starting with 0
+ * print_times_table - print N times table, starting with 0
  * @n: N times table
 */
 
@@ -12,20 +12,24 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 		return;
-	for (c = 0; c <= n; c++)
+	else if (n == 0)
 	{
-		for (e = 0; e <= n; e++)
+		printf("%d\n", n);
+		return;
+	}
+	else
+	{
+		for (c = 0; c <= n; c++)
 		{
-			if (n == 0)
+			for (e = 0; e <= n; e++)
 			{
-				printf("%d\n", n);
-				return;
+
+				if (e == 0)
+					printf("%d,", e * c);
+				else
+					e < n ? printf("%4d,", e * c) : printf("%4d", e * c);
 			}
-			if (e == 0)
-				printf("%d,", e * c);
-			else
-				e < n ? printf("%4d,", e * c) : printf("%4d", e * c);
+			printf("\n");
 		}
-		printf("\n");
 	}
 }
