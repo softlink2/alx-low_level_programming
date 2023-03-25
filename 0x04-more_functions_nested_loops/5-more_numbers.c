@@ -7,17 +7,20 @@
 
 void more_numbers(void)
 {
-	int n;
+	int n, c;
 
-	for (n = 0x0; n < 0xf; n++)
+	for (c = 0; c < 0xA; c++)
 	{
-		if (n >= 0xA && n < 0xf)
+		for (n = 0x0; n < 0xf; n++)
 		{
-			_putchar(n / 0xA + '0');
-			_putchar(n % 0xA + '0');
+			if (n >= 0xA && n < 0xf)
+			{
+				_putchar(n / 0xA + '0');
+				_putchar(n % 0xA + '0');
+			}
+			else
+				_putchar(n + '0');
 		}
-		else
-			_putchar(n + '0');
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
