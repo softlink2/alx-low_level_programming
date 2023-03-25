@@ -15,7 +15,7 @@ void more_numbers(void)
 		{
 			if (n >= 0xA)
 				_putchar(n / 0xA + '0');
-			_putchar(n % 0xA + '0'); 
+			_putchar(n % 0xA + '0');
 		}
 		_putchar('\n');
 	}
