@@ -13,7 +13,7 @@ void more_numbers(void)
 	{
 		for (n = 0x0; n < 0xf; n++)
 		{
-			if (n >= 0xA && n < 0xf)
+			if (n >= 0xA)
 			{
 				_putchar(n / 0xA + '0');
 				_putchar(n % 0xA + '0');
