@@ -8,10 +8,13 @@
  */
 
 #define MAX 4000000
+#define STARTX 1
+#define STARTY 2
 
 int main(void)
 {
-	long fib[3] = {1, 2, 2};
+	/* Make sure to hardcode the sum of the first two terms */
+	long fib[3] = {STARTX, STARTY, STARTY};
 	long sum = 0;
 
 	/**
