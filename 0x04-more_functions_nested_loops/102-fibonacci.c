@@ -11,7 +11,7 @@ int main(void)
 	char n = 0;
 	long fib[3] = {1, 2, 0};
 
-    /**
+	/**
 	 * `fib` is an array used to store the two numbers each Fibonacci
 	 * sequence. `fib[0]` stores the current number, and `fib[1]` stores the
 	 * previous number.
