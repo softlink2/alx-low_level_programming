@@ -20,7 +20,7 @@ int main(void)
 
 	while (n++ < 50)
 	{
-		printf("%ld\n", fib[0]);
+		(n < 50) ? printf("%ld, ", fib[0]) : printf("%ld\n", fib[0]);
 		fib[2] = fib[1] + fib[0];
 		fib[0] = fib[1];
 		fib[1] = fib[2];
