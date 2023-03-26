@@ -11,7 +11,6 @@
 
 int main(void)
 {
-	char n = 0;
 	long fib[3] = {1, 2, 0};
 	long sum = 0;
 
