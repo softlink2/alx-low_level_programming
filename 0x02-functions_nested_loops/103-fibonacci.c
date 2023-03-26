@@ -25,7 +25,8 @@ int main(void)
 	while (n++ < 50 && fib[2] < MAX)
 	{
 		if (fib[2] % 2)
-			(n < 50 && fib[1] + fib[2] <= MAX) ? printf("%ld, ", fib[0]) : printf("%ld\n", fib[0]);
+			(n < 50 && fib[1] + fib[2] <= MAX) ?
+				printf("%ld, ", fib[0]) : printf("%ld\n", fib[0]);
 		fib[2] = fib[1] + fib[0];
 		fib[0] = fib[1];
 		fib[1] = fib[2];
