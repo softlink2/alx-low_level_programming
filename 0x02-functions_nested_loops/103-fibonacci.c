@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	long fib[3] = {1, 2, 0};
+	long fib[3] = {1, 2, 2};
 	long sum = 0;
 
 	/**
@@ -25,11 +25,12 @@ int main(void)
 
 	while (fib[2] <= MAX)
 	{
-		if (fib[2] % 2)
+		if (fib[2] % 2 == 0)
 			sum += fib[2];
 		fib[2] = fib[1] + fib[0];
 		fib[0] = fib[1];
 		fib[1] = fib[2];
+
 	}
 	printf("%ld\n", sum);
 
