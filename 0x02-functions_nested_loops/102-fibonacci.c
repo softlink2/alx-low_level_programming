@@ -1,18 +1,31 @@
 #include <stdio.h>
 
-#define MAX 50
+/**
+ * main - entry point
+ * Description: print the first 50 fibonacci numbers, starting with 1 and 2
+ * Return: 0
+ */
 
 int main(void)
 {
-	int n, fib, prev;
+	char n = 0;
+	long fib[3] = {1, 2, 0};
 
-	prev = 1;
-	fib = 0;
-	for (n = 0; n < MAX; n++)
+	/**
+	 * `fib` is an array used to store the two numbers each Fibonacci
+	 * sequence. `fib[0]` stores the current number, and `fib[1]` stores the
+	 * previous number.
+	 * The next number is computed as the sum of `fib[0]`
+	 * and `fib[1]`, and stored in `fib[2]`.
+	 * `fib[0]` is set to `fib[1]`, and `fib[1]` is set to `fib[2]`
+	 */
+
+	while (n++ < 50)
 	{
-		printf("%d%s", fib, fib < MAX ? ", " : "");
-		fib = prev + fib;
-		prev = fib;
+		(n < 50) ? printf("%ld, ", fib[0]) : printf("%ld\n", fib[0]);
+		fib[2] = fib[1] + fib[0];
+		fib[0] = fib[1];
+		fib[1] = fib[2];
 	}
 
 	return (0);
