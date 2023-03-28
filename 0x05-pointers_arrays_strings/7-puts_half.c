@@ -8,10 +8,21 @@
 
 void puts_half(char *s)
 {
-	unsigned int c;
+	unsigned int c, len;
 
-	for (c = strlen(s) / 2; c <= strlen(s) - 1; c++)
-		_putchar(s[c]);
+	if (strlen(s) > 0)
+	{
+		if (strlen(s) % 2 == 0)
+		{
+			len = (strlen(s) - 1) / 2;
+		}
+		else
+		{
+			len = strlen(s) / 2;	
+		}
+		for (c = len; c <= strlen(s) - 1; c++)
+			_putchar(s[c]);
+	}
 	_putchar('\n');
 }
 
