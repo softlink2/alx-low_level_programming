@@ -18,9 +18,9 @@ void puts_half(char *s)
 		}
 		else
 		{
-			len = strlen(s) / 2;	
+			len = strlen(s) / 2;
 		}
-		for (c = len; c <= strlen(s) - 1; c++)
+		for (c = len; c < strlen(s) - 1; c++)
 			_putchar(s[c]);
 	}
 	_putchar('\n');
