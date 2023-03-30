@@ -10,12 +10,12 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-    unsigned int c;
-    int e;
+	unsigned int c;
+	int e;
 
-    for (c = strlen(dest), e = 0; src[e] != '\0' && e < n; c++, e++)
-        dest[c] = src[e];
-    dest[c] = '\0';
+	for (c = strlen(dest), e = 0; src[e] != '\0' && e < n; c++, e++)
+		dest[c] = src[e];
+	dest[c] = '\0';
 
-    return (dest);
+	return (dest);
 }
