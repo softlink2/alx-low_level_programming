@@ -16,10 +16,10 @@ char *_strncpy(char *dest, char *src, int n)
 	if (strlen(src) != 0)
 	{
 		for (e = 0; src[e] != '\0' && e < strlen(src); e++)
-			if (e < (unsigned) n && (unsigned) n < strlen(dest))
+			if (e < (unsigned) n && (unsigned) n < strlen(src))
 				dest[e] = src[e];
-		dest[e] = '\0';
 	}
 
 	return (dest);
 }
+
