@@ -9,10 +9,10 @@
 
 char *string_toupper(char *str)
 {
-		unsigned c;
+		unsigned int c;
 
 		for (c = 0; c < strlen(str); c++)
-				if (str[c] >= 'a' && str[c] <= 'z')
-						str[c] = str[c] - 'a' + 'A';
+			if (str[c] >= 'a' && str[c] <= 'z')
+				str[c] = str[c] - 'a' + 'A';
 		return (str);
 }
