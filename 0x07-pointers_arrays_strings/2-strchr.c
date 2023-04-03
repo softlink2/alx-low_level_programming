@@ -13,8 +13,9 @@ char *_strchr(char *s, char c)
 {
 	unsigned int n;
 
-	for (n = 0; n < strlen(s); n++)
+	for (n = 0; n <= strlen(s); n++)
 		if (s[n] == c)
 			return (s + n);
 	return (NULL);
 }
+
