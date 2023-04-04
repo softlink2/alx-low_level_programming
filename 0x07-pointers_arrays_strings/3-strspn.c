@@ -13,6 +13,8 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int c, count;
 	int hash[256] = {0};
 
+	if (s == NULL || accept == NULL)
+		return (0);
 	for (c = 0; c < strlen(accept); c++)
 		hash[(unsigned char) accept[c]] = 1;
 	for (c = 0; c < strlen(s); c++)
