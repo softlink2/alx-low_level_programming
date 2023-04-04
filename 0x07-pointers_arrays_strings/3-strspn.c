@@ -10,7 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int c, count;
+	unsigned int c, count = 0;
 	int hash[256] = {0};
 
 	if (s == NULL || accept == NULL)
