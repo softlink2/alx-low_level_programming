@@ -1,19 +1,14 @@
 #include <stdio.h>
 
-/**
- * main - entry point
- * Return: 0 value on success
- */
-
-int main(void)
+int
+main(void)
 {
-	char ch;
+	char c;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (c = 'a'; c <= 'z'; ++c)
 	{
-		if (ch == 'q' || ch == 'e')
-			continue;
-		putchar(ch);
+		if (c != 'q' && c != 'e')
+			putchar(c);
 	}
 	putchar('\n');
 

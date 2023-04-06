@@ -1,23 +1,15 @@
 #include <stdio.h>
 
-/**
- * main - entry point
- *
- * Return: 0
- */
-
-int main(void)
+int
+main(void)
 {
-	int i = '0';
+	int c;
 
-	while (i <= '9')
+	for (c = 0; c < 10; ++c)
 	{
-		putchar(i);
-		i++;
+		putchar(c % 10 + '0');
 	}
 	putchar('\n');
 
 	return (0);
 }
-
-

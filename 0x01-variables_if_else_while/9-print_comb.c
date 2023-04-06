@@ -1,22 +1,18 @@
 #include <stdio.h>
 
-/**
- * main - entry point
- * Return: 0
- */
-
-int main(void)
+int
+main(void)
 {
-	int i = '0';
+	int n;
 
-	while (i <= '9')
+	for (n = 0; n < 10; n++)
 	{
-		putchar(i);
-		if (i == '9')
-			break;
-		putchar(',');
-		putchar(' ');
-		i++;
+		putchar(n % 10 + '0');
+		if (n != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 
