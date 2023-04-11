@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - minimum number of coins to make change
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 on success else 1 on failure
+ */
+
 int main(int argc, char *argv[])
 {
 	int a, n = 0, i, t;
