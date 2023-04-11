@@ -9,3 +9,4 @@ main(int argc, char **argv)
 		printf("%s\n", argv[c++]);
 	return (0);
 }
+
