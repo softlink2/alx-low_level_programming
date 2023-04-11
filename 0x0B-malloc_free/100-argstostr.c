@@ -4,7 +4,7 @@
 char *
 argstostr(int ac, char **av)
 {
-	char c, d, e = 0;
+	int c, d, e = 0;
 	char *ptr;
 
 	if (ac == 0 || av == NULL)
@@ -25,3 +25,4 @@ argstostr(int ac, char **av)
 
 	return (ptr);
 }
+
