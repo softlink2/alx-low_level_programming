@@ -25,6 +25,6 @@ _tail_palindrome(char *s, int idx, int len)
 		return (1);
 	else if (s[idx] != s[len - 1])
 		return (0);
-  
+
 	return (_tail_palindrome(s, idx + 1, len - 1));
 }
