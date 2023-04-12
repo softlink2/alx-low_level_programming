@@ -4,29 +4,34 @@
 #include <ctype.h>
 #include "main.h"
 
-char **
-strtow(char *str)
+/**
+ * strtow - split strings into words
+ * @str: string
+ * Return: an array of strings, or NULL
+*/
+
+char **strtow(char *str)
 {
-    int c, d, e = 0;
-    char **ptr;
+	int c, d, e = 0;
+	char **ptr;
 
-    if (str == NULL || str[0] == '\0')
-	return (NULL);
-    ptr = malloc(strlen(str) + 1);
-    if (ptr == NULL)
-	return (NULL);
-    for (c = 0; str[c]; c++)
-    {
-    	if (!isblank(str[c]) && str[c] != '\0')
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+	ptr = malloc(strlen(str) + 1);
+	if (ptr == NULL)
+		return (NULL);
+	for (c = 0; str[c]; c++)
 	{
-	    ptr[e][d++] = str[c];
-	} else {
-	    ptr[e++][d] = '\0';
-	    d = 0;
-	    continue;
+		if (!isblank(str[c]) && str[c] != '\0')
+			ptr[e][d++] = str[c];
+		else
+		{
+			ptr[e++][d] = '\0';
+			d = 0;
+			continue;
+		}
 	}
-    }
-    ptr[e][d] = '\0';
-    return (ptr);
-}
 
+	ptr[e][d] = '\0';
+	return (ptr);
+}
