@@ -26,7 +26,7 @@ main(void)
 					}
 				}
 			}
-		}	
+		}
 	}
 	putchar('\n');
 
