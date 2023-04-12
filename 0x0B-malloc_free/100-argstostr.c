@@ -9,11 +9,14 @@ argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (c = 0; c < ac; c++)
 		d += strlen(av[c]) + 1;
+
 	ptr = malloc(d + 1);
 	if (ptr == NULL)
 		return (NULL);
+
 	for (c = 0; c < ac; c++)
 	{
 		for (d = 0; av[c][d]; d++)
@@ -21,8 +24,8 @@ argstostr(int ac, char **av)
 		if (av[c][d] == '\0')
 			ptr[e++] = '\n';
 	}
+
 	ptr[e] = '\0';
 
 	return (ptr);
 }
-
