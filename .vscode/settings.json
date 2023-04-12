@@ -1,8 +1,0 @@
-{
-  "files.associations": {
-    "*.ejs": "html",
-    "sstream": "c",
-    "random": "c",
-    "main.h": "c"
-  }
-}
