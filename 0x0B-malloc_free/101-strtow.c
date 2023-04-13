@@ -18,7 +18,10 @@ char **strtow(char *str)
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 
-	words = malloc((strlen(str)));
+	for (i = 0; i < strlen(str); i++)
+		if (!isblank(str[i]))
+			c++;
+	words = malloc(c * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
