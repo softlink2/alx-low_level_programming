@@ -29,7 +29,8 @@ char **strtow(char *str)
 			state = 1;
 			start++;
 		}
-		else if ((isblank(str[i]) || str[i] == '\0') && state == 1 && !isblank(str[i - 1]))
+		else if ((isblank(str[i]) || str[i] == '\0') &&
+				state == 1 && !isblank(str[i - 1]))
 		{
 			state = 0;
 
@@ -37,7 +38,8 @@ char **strtow(char *str)
 			if (words[c] == NULL)
 				return (NULL);
 
-			for (end = i - start, d = 0; str[end] != '\0' && !isblank(str[end]); end++, d++)
+			for (end = i - start, d = 0; str[end] != '\0' &&
+					!isblank(str[end]); end++, d++)
 				words[c][d] = str[end];
 			words[c++][start] = '\0';
 			start = 0;
