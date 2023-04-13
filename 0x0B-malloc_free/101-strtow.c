@@ -22,7 +22,7 @@ char **strtow(char *str)
 		* over-provision memory to prevent pre-processing
 		*/
 
-	words = malloc((strlen(str) / 2 + 1) * sizeof (char *));
+	words = malloc((strlen(str) / 2 + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
@@ -34,11 +34,13 @@ char **strtow(char *str)
 			state = 1;
 			start++;
 		}
-		else if ((isblank(str[i]) || str[i] == '\0') && state == 1 && (i == 0 || !isblank(str[i-1])))
+		else if ((isblank(str[i]) || str[i] == '\0') &&
+				state == 1 && (i == 0 || !isblank(str[i - 1])))
 		{
 			state = 0;
 			words[c] = malloc(start + 1);
-			for (end = i - start, d = 0; str[end] != '\0' && !isblank(str[end]); end++, d++)
+			for (end = i - start, d = 0; str[end] != '\0' &&
+					!isblank(str[end]); end++, d++)
 				words[c][d] = str[end];
 			words[c++][start] = '\0';
 			start = 0;
