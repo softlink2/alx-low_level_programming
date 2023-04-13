@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -12,26 +11,40 @@
 
 char **strtow(char *str)
 {
-	int c, d, e = 0;
-	char **ptr;
+	char **words;
+	unsigned int i, c, d, start, end;
+	int state = 0;
 
-	if (str == NULL || str[0] == '\0')
+	if (str == NULL || strlen(str) == 0)
 		return (NULL);
-	ptr = malloc(strlen(str) + 1);
-	if (ptr == NULL)
+
+	/**
+		* over-provision memory to prevent pre-processing
+		*/
+
+	words = malloc((strlen(str) / 2 + 1) * sizeof (char *));
+	if (words == NULL)
 		return (NULL);
-	for (c = 0; str[c]; c++)
+
+	start = c = 0;
+	for (i = 0; i <= strlen(str); i++)
 	{
-		if (!isblank(str[c]) && str[c] != '\0')
-			ptr[e][d++] = str[c];
-		else
+		if (!isblank(str[i]) && str[i] != '\0')
 		{
-			ptr[e++][d] = '\0';
-			d = 0;
-			continue;
+			state = 1;
+			start++;
+		}
+		else if ((isblank(str[i]) || str[i] == '\0') && state == 1 && (i == 0 || !isblank(str[i-1])))
+		{
+			state = 0;
+			words[c] = malloc(start + 1);
+			for (end = i - start, d = 0; str[end] != '\0' && !isblank(str[end]); end++, d++)
+				words[c][d] = str[end];
+			words[c++][start] = '\0';
+			start = 0;
 		}
 	}
 
-	ptr[e][d] = '\0';
-	return (ptr);
+	return (words);
 }
+
