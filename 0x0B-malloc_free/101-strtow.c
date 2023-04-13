@@ -35,10 +35,14 @@ char **strtow(char *str)
 			start++;
 		}
 		else if ((isblank(str[i]) || str[i] == '\0') &&
-				state == 1 && (i == 0 || !isblank(str[i - 1])))
+				state == 1 && !isblank(str[i - 1]))
 		{
 			state = 0;
+
 			words[c] = malloc(start + 1);
+			if (words[c] == NULL)
+				return (NULL);
+
 			for (end = i - start, d = 0; str[end] != '\0' &&
 					!isblank(str[end]); end++, d++)
 				words[c][d] = str[end];
