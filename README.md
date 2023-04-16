@@ -16,7 +16,7 @@ Projects are separated by files and directories are made up of related projects.
 **[0x00-hello_world](0x00-hello_world)**
 
 Introduces the GNU C compiler using basic C programs and the stages of compilation.
-The [README](https://github.com/msrspsr/alx-low_level_programming/blob/main/0x00-hello_world/README.md) is aimed at being a fairly exhaustive exposition.
+The [README](0x00-hello_world/README.md) is aimed at being a fairly exhaustive exposition.
 
 #
 
