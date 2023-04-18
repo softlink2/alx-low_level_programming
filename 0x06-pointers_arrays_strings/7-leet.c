@@ -5,9 +5,11 @@
 #define MAX 256
 
 /**
- * leet - convert a string into leetspeak
-* @s; string
-*/ 
+  * leet - convert a string into leetspeak
+  * @s: string
+	* Return: string
+  */
+
 char *leet(char *s)
 {
 	unsigned int i = 0;
