@@ -21,9 +21,6 @@ char *leet(char *s)
 	permit['t'] = permit['T'] = '7';
 	permit['l'] = permit['L'] = '1';
 
-	if (copy == NULL)
-		return (NULL);
-
 	for (i = 0; i < strlen(s); i++)
 	{
 		if (permit[(unsigned char) s[i]] != 0)
