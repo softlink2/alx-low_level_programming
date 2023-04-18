@@ -32,7 +32,7 @@ char *leet(char *s)
 	}
 
 	copy[i] = '\0';
-
+	strcpy(s, copy);
 	return (copy);
 }
 
