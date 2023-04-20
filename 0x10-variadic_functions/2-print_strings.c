@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		sep = separator ? strdup(separator) : strdup("");
 		va_start(va, n);
 		for (d = 0; d < n; d++)
-				printf("%s%s", va_arg(va, char *), (d < n - 1) ? sep : "");
+			printf("%s%s", va_arg(va, char *), (d < n - 1) ? sep : "");
 		printf("\n");
 		va_end(va);
 }
