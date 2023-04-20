@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include <stdlib.h>
 
 /**
  * print_all - print anything
