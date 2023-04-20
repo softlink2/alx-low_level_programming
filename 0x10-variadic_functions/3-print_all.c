@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	while (*fmt)
 	{
 		if (!format[count + 1])
-			sep = "";	
+			sep = "";
 		switch (*fmt++)
 		{
 			case 'c':
