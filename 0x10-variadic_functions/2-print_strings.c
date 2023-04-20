@@ -5,7 +5,7 @@
 
 /**
  * print_strings - print all the strings in input
- * @separator: ...
+ * @separator: string to print between strings
  * @n: number of parameters
  */
 
@@ -22,3 +22,4 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		va_end(va);
 }
+
