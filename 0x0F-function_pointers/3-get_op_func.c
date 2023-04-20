@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * get_op_func - select the correct function to perform some operation 
+ * get_op_func - select the correct function to perform some operation
  * @s: the operator that's passed as an argument
  * Return: the equivalent function to the operator passed, or NULL
- * 
+ *
 */
 
 int (*get_op_func(char *s))(int a, int b)

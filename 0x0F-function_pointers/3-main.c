@@ -10,14 +10,12 @@
 
 int main(int argc, char **argv)
 {
-	int a1, a3;
 	operator op;
 
 	if (argc == 4)
 	{
 		op = get_op_func(argv[2]);
-		a1 = atoi(argv[1]), a3 = atoi(argv[3]);
-		printf("%d\n", op(a1, a3));
+		printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
 	}
 
 	return (0);
