@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    print_strings(NULL, 2, "Jay", "Django");
+    print_strings(NULL, 2, NULL, "Jay", "Django");
     return (0);
 }
 
