@@ -15,10 +15,13 @@ void print_all(const char * const format, ...)
 	float f;
 	int i, count = 0;
 
-	if (!format)
+	if (format)
+	{
+		fmt = strdup(format);
+		va_start(va, format);
+	} else
 		return;
-	fmt = strdup(format);
-	va_start(va, format);
+	
 	while (*fmt)
 	{
 		if (!format[count + 1])
