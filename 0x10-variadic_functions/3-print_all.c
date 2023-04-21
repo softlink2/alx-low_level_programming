@@ -13,9 +13,14 @@ void print_all(const char * const format, ...)
 	va_list va;
 	char c, *s, *fmt, *sep = ", ";
 	float f;
-	int i, count = 0;
+	int i, count = 0, state = 1;
 
-	fmt = strdup(format);
+	if (!format)
+	{
+		fmt = strdup("");
+		state = 0;
+	}
+	else fmt = strdup(format);
 	va_start(va, format);
 
 	while (*fmt)
@@ -47,7 +52,8 @@ void print_all(const char * const format, ...)
 		}
 		count++;
 	}
-	printf("\n");
+	if (state == 1)
+		printf("\n");
 	va_end(va);
 }
 
